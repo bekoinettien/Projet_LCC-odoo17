@@ -1,0 +1,28 @@
+<!-- wizard/decrypt_excel_wizard_view.xml -->
+<odoo>
+    <record id="view_decrypt_excel_wizard_form" model="ir.ui.view">
+        <field name="name">decrypt.excel.wizard.form</field>
+        <field name="model">decrypt.excel.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Decrypt Excel File">
+                <group>
+                    <field name="file" filename="file_name"/>
+                    <field name="file_name"/>
+                    <field name="password"/>
+                </group>
+                <footer>
+                    <button string="Decrypt" type="object" name="action_decrypt" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_decrypt_excel_wizard" model="ir.actions.act_window">
+        <field name="name">Decrypt Excel File</field>
+        <field name="res_model">decrypt.excel.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_decrypt_excel_wizard_form"/>
+        <field name="target">new</field>
+    </record>
+</odoo>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+	<record id="group_hr_prime_config" model="res.groups">
+		<field name="name">Octroyer</field>
+	</record>
+
+	<record id="group_hr_prime_exceptionnele" model="res.groups">
+		<field name="name">Prime exceptionnelle</field>
+	</record>
+
+	</data>
+</odoo>

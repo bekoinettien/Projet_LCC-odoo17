@@ -1,0 +1,8 @@
+<!-- views/menu_view.xml -->
+<odoo>
+    <menuitem id="menu_excel_decryptor_root" name="Excel Decryptor" sequence="10"/>
+
+    <menuitem id="menu_excel_decryptor_operations" name="Operations" parent="menu_excel_decryptor_root" sequence="10"/>
+
+    <menuitem id="menu_excel_decryptor_wizard" name="Decrypt Excel File" parent="menu_excel_decryptor_operations" action="action_decrypt_excel_wizard" sequence="10"/>
+</odoo>

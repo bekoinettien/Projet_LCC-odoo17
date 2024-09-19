@@ -1,0 +1,29 @@
+<odoo>
+    <record id="view_file_upload_form" model="ir.ui.view">
+        <field name="name">file.upload.form</field>
+        <field name="model">file.upload</field>
+        <field name="arch" type="xml">
+            <form string="File Upload">
+                <sheet>
+                    <group>
+
+                        <field name="file_data" filename="file_name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+
+    <record id="action_file_upload" model="ir.actions.act_window">
+        <field name="name">TELECHARGER</field>
+        <field name="res_model">file.upload</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item will appear in the Upper bar, That's why It needs NO parent or action -->
+<menuitem id="menu_file_upload_root" name="charger" sequence="10"/>
+<!-- This Menu Item must have a parent and an action -->
+<menuitem id="menu_file_upload_categ" name="telecher" parent="menu_file_upload_root" action="action_file_upload" sequence="15"/>
+</odoo>

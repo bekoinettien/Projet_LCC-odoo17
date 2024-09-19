@@ -1,0 +1,21 @@
+{
+    'name': "Importation_excel",
+    'sequence': '-1',
+    'summary': "Description sommaire de votre module",
+    'description': "Description détaillée de votre module",
+    'author': "Bekoin Etienne",
+    'website': "www.tds.ci",
+    'category': 'Uncategorized',
+    'version': '1.0',
+    'depends': ['base'],
+    'data': [
+        'security/ir.model.access.csv',
+        'views/excel_import_wizard_view.xml',
+        'views/excel_file_content_views.xml',
+        # 'menus/importer.xml',
+    ],
+    'demo': [],
+    'installable': True,
+    'auto_install': False,
+    'application': True,
+}

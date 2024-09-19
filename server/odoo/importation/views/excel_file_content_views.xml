@@ -1,0 +1,39 @@
+<odoo>
+    <!-- Tree View -->
+    <record id="view_tree_excel_file_content" model="ir.ui.view">
+        <field name="name">excel.file.content.tree</field>
+        <field name="model">excel.file.content</field>
+        <field name="arch" type="xml">
+            <tree string="Excel File Content">
+                <field name="column1"/>
+                <field name="column2"/>
+                <!-- Add other fields as needed -->
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_form_excel_file_content" model="ir.ui.view">
+        <field name="name">excel.file.content.form</field>
+        <field name="model">excel.file.content</field>
+        <field name="arch" type="xml">
+            <form string="Excel File Content">
+                <group>
+                    <field name="column1"/>
+                    <field name="column2"/>
+                    <!-- Add other fields as needed -->
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_excel_file_content" model="ir.actions.act_window">
+        <field name="name">Excel File Content</field>
+        <field name="res_model">excel.file.content</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menuitem -->
+    <menuitem id="menu_excel_file_content" name="Excel File Content" parent="menu_excel_import_root" action="action_excel_file_content"/>
+</odoo>

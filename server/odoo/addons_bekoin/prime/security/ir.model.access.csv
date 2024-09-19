@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_prime_config,prime.config,model_prime_config,group_hr_prime_config,1,1,1,1
+access_prime_exceptionnele,prime.exceptionnele,model_prime_exceptionnele,group_hr_prime_exceptionnele,1,1,1,1
+access_group_prime,group.prime,model_group_prime,group_hr_prime_exceptionnele,1,1,1,1
+access_planting_prime,planting.prime,model_planting_prime,group_hr_prime_exceptionnele,1,1,1,1
+access_seuil_prime,seuil.prime,model_seuil_prime,group_hr_prime_exceptionnele,1,1,1,1
+access_farmer_list_wizard,farmer.list.wizard,model_farmer_list_wizard,group_hr_prime_exceptionnele,1,1,1,1

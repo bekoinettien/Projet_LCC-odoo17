@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <menuitem name="IMPORTATION"
+      id="root_menu_administration"
+      sequence="1"/>
+
+    <menuitem name="Importer"
+      id="root_menu_importer_Importer"
+      parent="root_menu_administration"
+      action="action_excel_import_wizard"
+      sequence="2"/>
+
+  </data>
+</odoo>
+
+<!-- This Menu Item will appear in the Upper bar, That's why It needs NO parent or action -->
+<menuitem id="MODULE_NAME_root" name="" sequence=""/>
+<!-- This Menu Item must have a parent and an action -->
+<menuitem id="UNIQUE_ID_categ" name="" parent="" action="" sequence=""/>

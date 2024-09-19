@@ -1,0 +1,12 @@
+<!-- custom_module/data/ir_cron_data.xml -->
+<odoo>
+    <record id="ir_cron_import_files_from_demo_folder" model="ir.cron">
+        <field name="name">Import Files from DEMO Folder</field>
+        <field name="model_id" ref="model_custom_module"/>
+        <field name="state">code</field>
+        <field name="code">model.import_files_from_demo_folder()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">hours</field>
+        <field name="numbercall">-1</field>
+    </record>
+</odoo>

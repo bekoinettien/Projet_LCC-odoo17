@@ -1,0 +1,109 @@
+<odoo>
+    <!-- Wizard View -->
+    <record id="view_excel_import_wizard_form" model="ir.ui.view">
+        <field name="name">excel.import.wizard.form</field>
+        <field name="model">excel.import.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Import Excel File">
+                <group>
+                    <field name="file" filename="filename"/>
+                </group>
+                <footer>
+                    <button string="Import" type="object" name="import_file" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Menuitem -->
+    <menuitem id="menu_excel_import_root" name="Excel Import"/>
+    <menuitem id="menu_excel_import" name="Import Wizard" parent="menu_excel_import_root" action="action_excel_import_wizard"/>
+
+    <!-- Action -->
+    <record id="action_excel_import_wizard" model="ir.actions.act_window">
+        <field name="name">Excel Import Wizard</field>
+        <field name="res_model">excel.import.wizard</field>
+
+        <field name="target">new</field>
+    </record>
+
+   </odoo>
+
+<!--<odoo>-->
+<!--    &lt;!&ndash; Action &ndash;&gt;-->
+<!--    <record id="action_excel_password_removal" model="ir.actions.act_window">-->
+<!--        <field name="name">Excel Password Removal</field>-->
+<!--        <field name="res_model">excel.password.removal</field>-->
+
+<!--        <field name="view_mode">tree,form</field>-->
+<!--    </record>-->
+
+<!--    &lt;!&ndash; Menuitem &ndash;&gt;-->
+<!--    <menuitem id="menu_excel_password_removal_root" name="Excel Password Removal"/>-->
+<!--    <menuitem id="menu_excel_password_removal" name="Remove Password" parent="menu_excel_password_removal_root" action="action_excel_password_removal"/>-->
+
+<!--    &lt;!&ndash; Tree View &ndash;&gt;-->
+<!--    <record id="view_tree_excel_password_removal" model="ir.ui.view">-->
+<!--        <field name="name">excel.password.removal.tree</field>-->
+<!--        <field name="model">excel.password.removal</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <tree string="Excel Password Removal">-->
+<!--                <field name="name"/>-->
+<!--                <field name="password"/>-->
+<!--            </tree>-->
+<!--        </field>-->
+<!--    </record>-->
+
+<!--    &lt;!&ndash; Form View &ndash;&gt;-->
+<!--    <record id="view_form_excel_password_removal" model="ir.ui.view">-->
+<!--        <field name="name">excel.password.removal.form</field>-->
+<!--        <field name="model">excel.password.removal</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <form string="Remove Excel Password">-->
+<!--                <sheet>-->
+<!--                    <group>-->
+<!--                        <field name="name"/>-->
+<!--                        <field name="password"/>-->
+<!--                    </group>-->
+<!--                    <footer>-->
+<!--                        <button string="Remove Password" type="object" name="remove_password" class="btn-primary"/>-->
+<!--                    </footer>-->
+<!--                </sheet>-->
+<!--            </form>-->
+<!--        </field>-->
+<!--    </record>-->
+<!--</odoo>-->
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<odoo>-->
+<!--    <data>-->
+<!--        &lt;!&ndash; Vue pour le formulaire d'importation Excel &ndash;&gt;-->
+<!--        <record id="view_excel_import_wizard_form" model="ir.ui.view">-->
+<!--            <field name="name">excel.import.wizard.form</field>-->
+<!--            <field name="model">excel.import.wizard</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <form string="Import Excel Data">-->
+<!--                    <group>-->
+<!--                        <field name="excel_file" filename="Excel File"/>-->
+<!--                        <field name="password"  readonly="1" placeholder="Password" />-->
+<!--                    </group>-->
+
+<!--                </form>-->
+<!--            </field>-->
+<!--        </record>-->
+
+<!--        &lt;!&ndash; Action pour ouvrir le formulaire d'importation Excel &ndash;&gt;-->
+<!--        <record id="action_excel_import_wizard" model="ir.actions.act_window">-->
+<!--            <field name="name">Import Excel Data</field>-->
+<!--            <field name="res_model">excel.import.wizard</field>-->
+<!--            <field name="view_mode">form</field>-->
+
+<!--            <field name="target">new</field>-->
+<!--        </record>-->
+
+<!--        &lt;!&ndash; Menu item pour accéder à l'importation Excel &ndash;&gt;-->
+
+<!--    </data>-->
+<!--</odoo>-->

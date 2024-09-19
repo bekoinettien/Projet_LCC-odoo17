@@ -1,0 +1,40 @@
+<!-- custom_module/views/custom_view.xml -->
+<odoo>
+    <record id="view_form_custom_module" model="ir.ui.view">
+        <field name="name">custom.module.form</field>
+        <field name="model">custom.module</field>
+        <field name="arch" type="xml">
+            <form string="Custom Module">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="file_data" filename="file_name"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button string="Save" type="object" class="btn-primary" name="action_save"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_custom_module" model="ir.ui.view">
+        <field name="name">custom.module.tree</field>
+        <field name="model">custom.module</field>
+        <field name="arch" type="xml">
+            <tree string="Custom Module">
+                <field name="name"/>
+                <field name="file_name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_custom_module" model="ir.actions.act_window">
+        <field name="name">Custom Module</field>
+        <field name="res_model">custom.module</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_custom_module_root" name="Custom Module"/>
+    <menuitem id="menu_custom_module" name="Custom Module" parent="menu_custom_module_root" action="action_custom_module"/>
+</odoo>
